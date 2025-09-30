@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GTM × Customer Lifecycle — Battle Map (CI Impact)</title>
+<style>
+  :root{--bg:#f7f7f8;--card:#ffffff;--ink:#1f2937;--muted:#6b7280;--line:#e5e7eb;--pill:#111827;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"}
+  .wrap{max-width:1080px;margin:40px auto;padding:0 16px}
+  h1{font-size:clamp(22px,4vw,34px);margin:0 0 8px}
+  p.lead{color:var(--muted);margin:0 0 20px;max-width:800px}
+  .tabs{display:flex;gap:8px;flex-wrap:wrap}
+  .tab-btn{appearance:none;border:1px solid var(--line);background:#fff;color:#111;border-radius:999px;padding:8px 14px;cursor:pointer;font-weight:600}
+  .tab-btn.active{background:var(--pill);color:#fff;border-color:var(--pill)}
+  .section{display:none;margin-top:16px}
+  .section.active{display:block}
+  .grid{display:grid;gap:12px}
+  @media(min-width:900px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
+  @media(min-width:680px){.grid.cols-2{grid-template-columns:repeat(2,1fr)}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+  .card h3{margin:0;font-size:18px}
+  .card .hd{padding:14px 16px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+  .badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:4px 10px;border-radius:999px;color:#fff}
+  .radar{background:linear-gradient(90deg,#fb7185,#ec4899)}
+  .weapons{background:linear-gradient(90deg,#f59e0b,#f97316)}
+  .fine{background:linear-gradient(90deg,#38bdf8,#06b6d4)}
+  .shield{background:linear-gradient(90deg,#a78bfa,#6366f1)}
+  .amp{background:linear-gradient(90deg,#e879f9,#a855f7)}
+  .card .bd{padding:14px 16px}
+  .cols{display:grid;gap:16px}
+  @media(min-width:720px){.cols{grid-template-columns:1fr 1fr}}
+  h4{margin:0 0 6px;font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+  ul{margin:6px 0 0 18px;padding:0}
+  li{margin:6px 0}
+  .sep{height:1px;background:var(--line);margin:12px 0}
+  .wins .card h3{font-size:16px}
+  .footer{margin:24px 0 8px;color:var(--muted);font-size:12px}
+  .print-tip{display:inline-block;margin-top:6px;font-size:12px;color:var(--muted)}
+  @media print{body{background:#fff}.tab-btn{display:none}.section{display:block !important;page-break-inside:avoid}.wrap{margin:0;padding:0}}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>GTM × Customer Lifecycle <span style="color:var(--muted)">Battle Map</span></h1>
+      <p class="lead">How Competitive &amp; Market Intelligence powers offense and defense across the journey — and how your work translates into GTM outcomes.</p>
+      <div class="tabs" role="tablist">
+        <button class="tab-btn active" data-tab="map">Battle Map</button>
+        <button class="tab-btn" data-tab="wins">Proof Points</button>
+        <button class="tab-btn" data-tab="script">Interview Script</button>
+      </div>
+      <span class="print-tip">Tip: File → Print for a clean one-pager.</span>
+    </header>
+
+    <section id="map" class="section active">
+      <div class="grid cols-3">
+        <!-- Awareness -->
+        <article class="card">
+          <div class="hd"><h3>Awareness</h3><span class="badge radar">CI Role: Radar</span></div>
+          <div class="bd"><div class="cols"><div><h4>Competitor Move</h4><ul><li>Ad saturation & influencer hype</li><li>Same-same claims (“best 5G,” “lowest fees”)</li></ul></div><div><h4>Your GTM Counter</h4><ul><li>Precision targeting & emotional hooks</li><li>Credibility signals: awards, reviews, analyst quotes</li><li>Narrative white space (reliability > raw speed)</li></ul></div></div><div class="sep"></div><h4>CI’s Role</h4><ul><li>Track campaign timing, spend, themes</li><li>Surface messaging gaps & cultural trends</li><li>Advise brand story & proof hierarchy</li></ul></div>
+        </article>
+        <!-- Consideration -->
+        <article class="card">
+          <div class="hd"><h3>Consideration</h3><span class="badge weapons">CI Role: Weapons</span></div>
+          <div class="bd"><div class="cols"><div><h4>Competitor Move</h4><ul><li>Aggressive side-by-side comparisons</li><li>Discount feints & feature fog</li></ul></div><div><h4>Your GTM Counter</h4><ul><li>Transparent pricing & honest comparisons</li><li>Demo-led proof, case studies, testimonials</li><li>“Switching made easy”</li></ul></div></div><div class="sep"></div><h4>CI’s Role</h4><ul><li>Battlecards, teardown pricing, offer stack-ups</li><li>Objection handling & TCO narratives</li><li>Win/loss feedback to refine positioning</li></ul></div>
+        </article>
+        <!-- Purchase -->
+        <article class="card">
+          <div class="hd"><h3>Purchase</h3><span class="badge weapons">CI Role: Weapons</span></div>
+          <div class="bd"><div class="cols"><div><h4>Competitor Move</h4><ul><li>Buyouts, gift cards, one-click signups</li><li>Hidden fees & contract gotchas</li></ul></div><div><h4>Your GTM Counter</h4><ul><li>Frictionless checkout & transparent terms</li><li>Value-based incentives, flexible contracts</li><li>“Switch in minutes” playbooks</li></ul></div></div><div class="sep"></div><h4>CI’s Role</h4><ul><li>Promo monitoring & counter-offer intel</li><li>Journey friction benchmarks vs. rivals</li><li>Real-time sales enablement updates</li></ul></div>
+        </article>
+        <!-- Adoption -->
+        <article class="card">
+          <div class="hd"><h3>Adoption</h3><span class="badge fine">CI Role: Fine-Tune</span></div>
+          <div class="bd"><div class="cols"><div><h4>Competitor Move</h4><ul><li>Poach during onboarding stumbles</li><li>Undercut with “easier” setup claims</li></ul></div><div><h4>Your GTM Counter</h4><ul><li>Guided setup, human+AI support</li><li>First-10-minutes wow & habit building</li><li>Proactive comms & tutorials</li></ul></div></div><div class="sep"></div><h4>CI’s Role</h4><ul><li>Onboarding flow benchmarks, NPS/CSAT deltas</li><li>Feedback loops into product/CS</li><li>Identify moments to trigger value realization</li></ul></div>
+        </article>
+        <!-- Retention -->
+        <article class="card">
+          <div class="hd"><h3>Retention</h3><span class="badge shield">CI Role: Shield</span></div>
+          <div class="bd"><div class="cols"><div><h4>Competitor Move</h4><ul><li>Win-back blasts & promos</li><li>Aggressive contract buy
